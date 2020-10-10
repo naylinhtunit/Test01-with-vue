@@ -6,6 +6,8 @@ new Vue({
         firstMethodAge: 20,
         secondMethodAge: 20,
         thirdMethodAge: 20,
+        x: 0,
+        y: 0,
         website: 'https://www.google.com',
         websiteTag: '<a href="https://www.google.com">Inside bind js for html tag.</a>'
     },
@@ -28,6 +30,11 @@ new Vue({
 
         dblSubtract: function(dec){
             this.thirdMethodAge -= dec;;
+        },
+
+        updateXY: function(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;
         },
     }
 });

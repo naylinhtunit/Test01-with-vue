@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Vue Test</title>
+	<link rel="stylesheet" href="style.css">
 	<script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
@@ -16,17 +17,20 @@
 		<p v-html="websiteTag"></p>
 
 		<!-- First method -->
-		<button v-on:click="++firstMethodAge">Add year</button>
-		<button v-on:click="--firstMethodAge">Subtract year</button>
+		<button @click="++firstMethodAge">Add year</button>
+		<button @click="--firstMethodAge">Subtract year</button>
 		<p>{{ firstMethodAge }}</p>
 		<!-- Second method -->
-		<button v-on:click="add">Add</button>
-		<button v-on:click="subtract">Subtract</button>
+		<button @click="add">Add</button>
+		<button @click="subtract">Subtract</button>
 		<p>{{ secondMethodAge }}</p>
 		<!-- dblclick -->
-		<button v-on:dblclick="dblAdd(10)">Add</button>
-		<button v-on:dblclick="dblSubtract(10)">Subtract</button>
+		<button @dblclick="dblAdd(10)">Add</button>
+		<button @dblclick="dblSubtract(10)">Subtract</button>
 		<p>{{ thirdMethodAge }}</p>
+
+		<!-- Mousemove -->
+		<div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
 
 	</div>
 	<script src="app.js"></script>
