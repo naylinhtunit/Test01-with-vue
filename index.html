@@ -32,8 +32,14 @@
 		<!-- Mousemove -->
 		<div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
 
+		<br>
 		<!-- Prevent -->
 		<a v-on:click.prevent="google" href="https://google.com">Google</a>
+
+		<br><br>
+		<!-- Keyboard event -->
+		<input type="text" v-on:keyup.enter="logName">
+		<input type="text" v-on:keyup.alt.enter="logAge">
 
 	</div>
 	<script src="app.js"></script>

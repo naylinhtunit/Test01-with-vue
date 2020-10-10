@@ -39,6 +39,14 @@ new Vue({
 
         google: function(){
             alert('You click me!');
+        },
+
+        logName: function(){
+            console.log('You entered your name!');
+        },
+
+        logAge: function(){
+            console.log('You entered your age');
         }
     }
 });
