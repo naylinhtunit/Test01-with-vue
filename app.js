@@ -36,5 +36,9 @@ new Vue({
             this.x = event.offsetX;
             this.y = event.offsetY;
         },
+
+        google: function(){
+            alert('You click me!');
+        }
     }
 });

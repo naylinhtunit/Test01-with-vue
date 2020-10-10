@@ -17,7 +17,7 @@
 		<p v-html="websiteTag"></p>
 
 		<!-- First method -->
-		<button @click="++firstMethodAge">Add year</button>
+		<button @click.once="++firstMethodAge">Add year</button>
 		<button @click="--firstMethodAge">Subtract year</button>
 		<p>{{ firstMethodAge }}</p>
 		<!-- Second method -->
@@ -31,6 +31,9 @@
 
 		<!-- Mousemove -->
 		<div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
+
+		<!-- Prevent -->
+		<a v-on:click.prevent="google" href="https://google.com">Google</a>
 
 	</div>
 	<script src="app.js"></script>
