@@ -8,55 +8,19 @@
 <body>
 	<div id="vue-app">
 		
-		<h1>{{ greet('night') }}</h1>
-		<p>Name: {{ name }}</p>
-		
-		<!-- First method -->
-		<a v-bind:href="website">Google</a>
-		<!-- Second method -->
-		<p v-html="websiteTag"></p>
+		<!-- Dynamic CSS Classes -->
+		<!-- Method One -->
+		<!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
+			<span>Naylin</span>
+		</div> -->
 
-		<!-- First method -->
-		<button @click.once="++firstMethodAge">Add year</button>
-		<button @click="--firstMethodAge">Subtract year</button>
-		<p>{{ firstMethodAge }}</p>
-		<!-- Second method -->
-		<button @click="add">Add</button>
-		<button @click="subtract">Subtract</button>
-		<p>{{ secondMethodAge }}</p>
-		<!-- dblclick -->
-		<button @dblclick="dblAdd(10)">Add</button>
-		<button @dblclick="dblSubtract(10)">Subtract</button>
-		<p>{{ thirdMethodAge }}</p>
-
-		<!-- Mousemove -->
-		<div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
-
-		<br>
-		<!-- Prevent -->
-		<a v-on:click.prevent="google" href="https://google.com">Google</a>
-
+		<!-- Method Two -->
+		<button v-on:click="nearby = !nearby">Toggle nearby</button>
+		<button v-on:click="available = !available">Toggle available</button>
 		<br><br>
-		<!-- Keyboard event -->
-		<input type="text" v-on:keyup.enter="logName">
-		<input type="text" v-on:keyup.alt.enter="logAge">
-
-		<br><br>
-		<!-- Two way data binding -->
-		<input type="text" v-model="country">
-		<p>Country: {{ country }}</p>
-		<input type="number" v-model="phone">
-		<p>Phone No.: {{ phone }}</p>
-
-		<br><br>
-		<!-- Computed Properties -->
-		<button v-on:click="a++">Add A</button>
-		<button v-on:click="b++">Add B</button>
-		<p>A++: {{ a }}</p>
-		<p>B++: {{ b }}</p>
-
-		<p>Age + A: {{ addToA }}</p>
-		<p>Age + B: {{ addToB }}</p>
+		<div v-bind:class="compClass">
+			<span>Naylin</span>
+		</div>
 
 	</div>
 	<script src="app.js"></script>
