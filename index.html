@@ -8,19 +8,14 @@
 <body>
 	<div id="vue-app">
 		
-		<!-- Dynamic CSS Classes -->
-		<!-- Method One -->
-		<!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
-			<span>Naylin</span>
-		</div> -->
+		<button v-on:click="error = !error">Error</button>
+		<button v-on:click="success = !success">Success</button>
 
-		<!-- Method Two -->
-		<button v-on:click="nearby = !nearby">Toggle nearby</button>
-		<button v-on:click="available = !available">Toggle available</button>
 		<br><br>
-		<div v-bind:class="compClass">
-			<span>Naylin</span>
-		</div>
+		<!-- <p v-if="error">There is an error!</p>
+		<p v-else-if="success">Success!</p> -->
+		<p v-show="error">Error!</p>
+		<p v-show="success">Success!</p>
 
 	</div>
 	<script src="app.js"></script>
