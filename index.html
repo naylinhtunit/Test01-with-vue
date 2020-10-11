@@ -8,14 +8,17 @@
 <body>
 	<div id="vue-app">
 		
-		<button v-on:click="error = !error">Error</button>
-		<button v-on:click="success = !success">Success</button>
+		<!-- Looping with v-for -->
+		<ul>
+			<li v-for="(browser, index) in browsers">{{ index }}. {{ browser }}</li>
+			<li v-for="(name, index) in names">{{ index }}. Name = {{ name.name }}, Age = {{ name.age }}</li>
+		</ul>
 
-		<br><br>
-		<!-- <p v-if="error">There is an error!</p>
-		<p v-else-if="success">Success!</p> -->
-		<p v-show="error">Error!</p>
-		<p v-show="success">Success!</p>
+		<template v-for="name in names">
+			<div v-for="(val, key) in name">
+				{{ key }} - {{ val }}
+			</div>
+		</template>
 
 	</div>
 	<script src="app.js"></script>

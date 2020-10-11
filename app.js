@@ -1,8 +1,12 @@
 new Vue({
     el: '#vue-app',
     data: {
-        error: false,
-        success: false
+        browsers: ['Chrome', 'Mozilla', 'Opera'],
+        names: [
+            {name: 'Nay', age: 21},
+            {name: 'Lin', age: 20},
+            {name: 'Htun', age: 19}
+        ]
     },
     methods: {
         //
