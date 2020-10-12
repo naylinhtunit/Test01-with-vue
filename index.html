@@ -6,20 +6,16 @@
 	<script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
-	<div id="vue-app">
-		
-		<!-- Looping with v-for -->
-		<ul>
-			<li v-for="(browser, index) in browsers">{{ index }}. {{ browser }}</li>
-			<li v-for="(name, index) in names">{{ index }}. Name = {{ name.name }}, Age = {{ name.age }}</li>
-		</ul>
+	<!-- Multiple Vue Instances -->
+	<div id="vue-app-one">
+		<h2>{{ title }}</h2>
+		<p>{{ greet }}</p>
+	</div>
 
-		<template v-for="name in names">
-			<div v-for="(val, key) in name">
-				{{ key }} - {{ val }}
-			</div>
-		</template>
-
+	<div id="vue-app-two">
+		<h2>{{ title }}</h2>
+		<p>{{ greet }}</p>
+		<button v-on:click="titleChange">Change Title</button>
 	</div>
 	<script src="app.js"></script>
 </body>

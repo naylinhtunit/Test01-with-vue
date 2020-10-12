@@ -1,18 +1,43 @@
-new Vue({
-    el: '#vue-app',
+var one = new Vue({
+    el: '#vue-app-one',
     data: {
-        browsers: ['Chrome', 'Mozilla', 'Opera'],
-        names: [
-            {name: 'Nay', age: 21},
-            {name: 'Lin', age: 20},
-            {name: 'Htun', age: 19}
-        ]
+        //
+        title: 'One'
     },
+
     methods: {
         //
     },
 
     computed: {
         //
+        greet: function(){
+            return 'There is one!';
+        }
     }
 });
+
+var two = new Vue({
+    el: '#vue-app-two',
+    data: {
+        //
+        title: 'two'
+    },
+
+    methods: {
+        //
+        titleChange: function(){
+            one.title = "Changed Title";
+        }
+    },
+
+    computed: {
+        //
+        greet: function(){
+            return 'There is two!';
+        }
+    }
+
+});
+
+two.title = "Change from outside";
